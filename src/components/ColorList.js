@@ -1,4 +1,5 @@
 import React from "react";
+import ColorItem from "./ColorItem";
 function ColorList() {
   const colors = [
     "firebrick",
@@ -9,7 +10,7 @@ function ColorList() {
   ];
 
   const colorElements = colors.map((color) => {
-    return <li style={{ color: color }}>{color}</li>;
+    return <ColorItem key={color} color={color} />;
   });
   return (
     <div>
